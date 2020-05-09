@@ -1,0 +1,15 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <h1 class="col-md-12">{{title}}</h1>
+
+    <nav class="btn-group margin-bottom-g col-md-3" role="group">
+      <a type="button" routerLink="/dashboard" class="btn btn-primary">Dashboard</a>
+      <a type="button" routerLink="/heroes" class="btn btn-primary">Heroes</a>
+    </nav>
+
+  </div>
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
+
+</div>

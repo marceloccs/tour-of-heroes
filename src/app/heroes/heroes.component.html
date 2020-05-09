@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>My Heroes</h2>
+    <ul class="heroes list-inline">
+      <li class="list-inline-item" *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+          <span class="badge">{{hero.id}}</span> {{hero.name}} <mat-icon>{{hero.svgIcon}}</mat-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-3 mt-3">
+
+      <div class="input-group mb-3">
+        <input type="text" #heroName class="form-control" placeholder="Hero Name">
+        <div class="input-group-append">
+          <button (click)="add(heroName.value); heroName.value=''" type="button" class="btn btn-outline-success">
+            +
+          </button>
+        </div>
+      </div>
+
+  </div>

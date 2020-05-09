@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2><label for="search-box">Hero Search</label></h2>
+
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" class="form-control"/>
+
+    <div id="list-example" class="list-group">
+        <a *ngFor="let hero of heroes$ | async" class="list-group-item list-group-item-action" routerLink="/detail/{{hero.id}}">
+          {{hero.name}} {{hero.svgIcon}}
+        </a>
+    </div>
+  </div>
+</div>
